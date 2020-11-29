@@ -1,0 +1,36 @@
+- name: Remove Logical Volume
+  gather_facts: No
+  remote_user: apache
+  become: true
+  become_method: sudo
+  hosts: "{{ Host }}"
+  vars_prompt:
+  - name: Host
+    prompt: "Enter Host ip"
+    private: no
+  - name: Vgname
+    prompt: "Enter VgName"
+    private: no
+  - name: Lvname
+    prompt: "Enter Lvname"
+    private: no
+  - name: Disk
+    prompt: "Enter disk name"
+    private: no
+  - name: Size
+    prompt: "Enter size"
+    private: no
+
+  - name: To delete the logical volume
+    community.general.lvol:
+      vg: "{{ Vgname }}"
+      lv: "{{ Lvname }}"
+      size: "{{ Size }}"
+      pvs: "{{ Disk }}"
+      state: absent
+      force: yes
+    register: x
+
+  - debug:
+      var: x
+

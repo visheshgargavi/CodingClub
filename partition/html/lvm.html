@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <!-- <link rel="stylesheet" href="aws.css"> -->
+
+    <style>
+        body
+        {
+
+           /* background-color:black; */
+           background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/46/RHEL_8_Desktop.png");
+        }
+
+        *
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'arial', sans-serif;
+}
+
+.section
+{
+    text-align: center;
+    position: relative;
+     width: 100%;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+
+
+.image
+{
+
+    width:300px;
+}
+
+
+.container
+{
+    text-align:center;
+    padding-top:-1000px;
+}
+
+.btn
+{
+    width: 200px;
+    height: 50px;
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px20px;
+    font-size: 20px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin:20px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.btn1,.btn2,.btn3,.btn4,.btn5
+{
+    color: #3498db;
+
+}
+
+.btn6,.btn7,.btn8,.btn9,.btn10
+{
+    color: #fff;
+}
+
+.btn1:hover,.btn2:hover,.btn3:hover,.btn4:hover,.btn5:hover
+{
+    color: #fff;
+}
+
+
+.btn6:hover,.btn7:hover,.btn8:hover,.btn9:hover,.btn10:hover
+{
+    color: #3498db;
+}
+.btn::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+
+}
+
+.btn1::before,.btn3::before,.btn5::before,.btn7::before,.btn9::before
+{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn2::before,.btn4::before,.btn6::before,.btn8::before,.btn10::before
+{
+    bottom: 0;
+    border-radius: 50% 50% 0 0;
+}
+
+.btn6:before,.btn7:before,.btn8:before,.btn9:before,.btn10:before
+{
+    height: 180%;
+}
+.btn1:hover::before,.btn2:hover::before,.btn3:hover::before,.btn4:hover::before,.btn5:hover::before
+{
+    height:180%
+}
+
+.btn6:hover::before,.btn7:hover::before,.btn8:hover::before,.btn9:hover::before,.btn10:hover::before
+{
+    height:0%
+}
+        #mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 140px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: blue;
+}
+
+#blog {
+  top: 80px;
+  background-color: blue; /* Blue */
+}
+
+#projects {
+  top: 140px;
+  background-color: blue; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: blue; /* Light Black */
+}
+#hadoop {
+  top: 260px;
+  background-color: blue; /* Light Black */
+}
+#back {
+  top: 320px;
+  background-color: blue; /* Light Black */
+}
+
+
+        </style>
+</head>
+<body >
+    <div class="section">
+           <!-- <img class="image" src="https://i.pinimg.com/originals/a7/ff/ee/a7ffee61eab5dc466a5514a125c3725b.jpg"> -->
+           <img class="image" src="https://www.howtogeek.com/wp-content/uploads/gg/up/sshot4d33ca58bce04.png">
+
+        </div>
+                <div class="container">
+			<button class="btn btn1"><a href="pvcreate.html">pvcreate</button>
+			<button class="btn btn2"><a href="pvdisplay.html">pvdisplay</button>
+			<button class="btn btn3"><a href="vgcreate.html">vgcreate</button>
+			<button class="btn btn4"><a href="vgdisplay.html">vgdisplay</button>
+		   <button class="btn btn5"><a href="lvcreate.html">lvcreate</button>
+		   <button class="btn btn6"><a href="lvdisplay.html">lvdisplay</button>
+		   <button class="btn btn7"><a href="format.html">format</button>
+		   <button class="btn btn8"><a href="mount.html">mount</button>
+		   <button class="btn btn9"><a href="resize2fs.html">resize2fs</button>
+		   <button class="btn btn10"><a href="extend.html">extend/reduce</button>
+                </div>
+                <div id="mySidenav" class="sidenav">
+  <a href="redhat.html" id="about">COMMANDS</a>
+  <a href="docker.html" id="blog">DOCKER</a>
+  <a href="aws.html" id="projects">AWS</a>
+  <a href="partition.html" id="contact">PARTITION</a>
+  <a href="hadoop.html" id="hadoop">HADOOP</a>
+  <a href="#" id="back">BACK</a>
+</div>
+
+</body>
+</html>

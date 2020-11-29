@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: blue;
+  width: 500px;
+  height: 500px;
+  display: grid;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+.grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      align-items: center;
+      grid-row-gap: 50px;
+              grid-column-gap: 30px;
+    }
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: black;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 140px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: blue;
+}
+
+#blog {
+  top: 80px;
+  background-color: blue; /* Blue */
+}
+
+#projects {
+  top: 140px;
+  background-color: blue; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: blue; /* Light Black */
+}
+#hadoop {
+  top: 260px;
+  background-color: blue; /* Light Black */
+}
+#back {
+  top: 320px;
+  background-color: blue; /* Light Black */
+}
+
+body {
+  background-color: #328f8a;
+  background-image: url("https://image.shutterstock.com/image-illustration/3d-rendering-word-bright-yellow-260nw-634316555.jpg")
+}
+</style>
+</head>
+<body>
+        <center>
+        <h1> RESIZE-2-FS </h1>
+        </center>
+<div class= "grid">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="Paris" style="width:500px;height:500px">
+      <h3> Resize2fs </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/partition/resize2fs.py">
+              <br><br><br>
+<br>
+<br>
+<br>
+<br>
+Enter the full path of lv: <input type="text" name="d">
+<br><br><br>
+<br><br><br>
+<br>
+<br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="redhat.html" id="about">COMMANDS</a>
+  <a href="docker.html" id="blog">DOCKER</a>
+  <a href="aws.html" id="projects">AWS</a>
+  <a href="partition.html" id="contact">PARTITION</a>
+  <a href="hadoop.html" id="hadoop">HADOOP</a>
+  <a href="#" id="back">BACK</a>
+</div>
+</body>
+</html>

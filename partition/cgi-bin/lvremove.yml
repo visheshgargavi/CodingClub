@@ -1,0 +1,52 @@
+- name: Unmount logical volume and remove logical volume
+  gather_facts: No
+  remote_user: apache
+  become: true
+  become_method: sudo
+  hosts: "{{ Host }}"
+  vars_prompt:
+  - name: Host
+    prompt: "Enter Host ip"
+    private: no
+  - name: Vgname
+    prompt: "Enter VgName"
+    private: no
+  - name: Lvname
+    prompt: "Enter Lvname"
+    private: no
+  - name: Disk
+    prompt: "Enter disk name"
+    private: no
+  - name: Size
+    prompt: "Enter size"
+    private: no
+  - name: Fstype
+    prompt: "Enter format type"
+    private: no
+  - name: Src
+    prompt: "Enter Source"
+    private: no
+  - name: Dest
+    prompt: "Enter Destination"
+    private: no
+  tasks:
+  - name: Mounting dvd to the desired location
+    mount:
+      path: "{{ Dest }}"
+      src: "{{ Src }}"
+      fstype: "{{ Fstype }}"
+      state: unmounted
+
+  - name: To delete the logical volume
+    community.general.lvol:
+      vg: "{{ Vgname }}"
+      lv: "{{ Lvname }}"
+      size: "{{ Size }}"
+      pvs: "{{ Disk }}"
+      state: absent
+      force: yes
+    register: x
+
+  - debug:
+      var: x
+

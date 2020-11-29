@@ -1,0 +1,34 @@
+- name: Reduce the logical volume 
+  gather_facts: No
+  remote_user: apache
+  become: true
+  become_method: sudo
+  hosts: "{{ Host }}"
+  vars_prompt:
+  - name: Host
+    prompt: "Enter Host ip"
+    private: no
+  - name: Vgname
+    prompt: "Enter VgName"
+    private: no
+  - name: Lvname
+    prompt: "Enter Lvname"
+    private: no
+  - name: Size
+    prompt: "Enter size"
+    private: no
+  tasks:
+
+  - name: Reduce the logical volume
+    community.general.lvol:
+      vg: "{{ Vgname }}"
+      lv: "{{ Lvname }}"
+      size: "{{ Size }}"
+      force: yes
+      shrink: no
+    register: x
+
+  - debug:
+      var: x
+   
+

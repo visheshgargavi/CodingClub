@@ -1,0 +1,45 @@
+- name: static paritition
+  gather_facts: No
+  remote_user: apache
+  become: true
+  become_method: sudo
+  hosts: "{{ Host }}"
+  vars_prompt:
+  - name: Host
+    prompt: "Enter Host Ip"
+    private: no
+  - name: Device
+    prompt: "Enter device name"
+    private: no
+  - name: Number
+    prompt: "Enter Number"
+    private: no
+  - name: start
+    prompt: "Enter starting value"
+    private: no
+  - name: end
+    prompt: "Enter ending value"
+    private: no
+  - name: Src
+    prompt: "Enter source"
+    private: no 
+  - name: Dest
+    prompt: "Enter Destination"
+    private: no  
+  tasks:
+  - name: paritition
+    parted:
+      device: "{{ Device }}"
+      number: "{{ Number | int }}"
+      state: present
+      part_start: "{{ start }}"
+      part_end: "{{ end }}"
+    register: x
+  - debug:
+      var: x
+  - name: Mounting dvd to the desired location
+    mount:
+      path: "{{ Dest }}"
+      src: "{{ Src }}"
+      fstype: ext4
+      state: mounted

@@ -1,0 +1,68 @@
+- name: Dynamic paritition
+  gather_facts: No
+  remote_user: apache
+  become: true
+  become_method: sudo
+  hosts: "{{ Host }}"
+  vars_prompt:
+  - name: Host
+    prompt: "Enter Host ip"
+    private: no
+  - name: Vgname
+    prompt: "Enter VgName"
+    private: no
+  - name: Lvname
+    prompt: "Enter Lvname"
+    private: no
+  - name: Disk
+    prompt: "Enter disk name"
+    private: no
+  - name: Size
+    prompt: "Enter size"
+    private: no
+  - name: Fstype
+    prompt: "Enter format type"
+    private: no
+  - name: Src
+    prompt: "Enter Source"
+    private: no
+  - name: Dest
+    prompt: "Enter Destination"
+    private: no
+  tasks:
+  - name: Creating vg and pv
+    community.general.lvg:
+      vg: "{{ Vgname }}"
+      pvs: "{{ Disk }}"
+    register: y
+  - name: output of vg
+    debug:
+      var: y 
+  - name: Create a logical volume of 512m with disks /dev/sda and /dev/sdb
+    community.general.lvol:
+      vg: "{{ Vgname }}"
+      lv: "{{ Lvname }}"
+      size: "{{ Size }}"
+      pvs: "{{ Disk }}"
+      shrink: yes
+    register: x
+
+  - debug:
+      var: x
+
+  - name: create file system 
+    filesystem:
+      fstype: "{{ Fstype }}"
+      dev: "{{ Src }}"
+    register: z
+
+  - name: output of fstype
+    debug:
+      var: z
+  - name: Mounting dvd to the desired location
+    mount:
+      path: "{{ Dest }}"
+      src: "{{ Src }}"
+      fstype: "{{ Fstype }}"
+      state: mounted
+  

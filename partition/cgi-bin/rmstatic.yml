@@ -1,0 +1,35 @@
+- name: static paritition
+  gather_facts: No
+  remote_user: apache
+  become: true
+  become_method: sudo
+  hosts: "{{ Host }}"
+  vars_prompt:
+  - name: Host
+    prompt: "Enter Host Ip"
+    private: no
+  - name: Device
+    prompt: "Enter disk"
+    private: no
+  - name: Number
+    prompt: "Enter Number: "
+    private: no
+  - name: Src
+    prompt: "Enter source"
+    private: no 
+  - name: Dest
+    prompt: "Enter Destination"
+    private: no  
+  tasks:
+  - name: Mounting dvd to the desired location
+    mount:
+      path: "{{ Dest }}"
+      src: "{{ Src }}"
+      fstype: ext4
+      state: unmounted
+
+  - name: To delete the static partition
+    parted:
+      device: "{{ Device }}"
+      number: "{{ Number }}"
+      state: absent
