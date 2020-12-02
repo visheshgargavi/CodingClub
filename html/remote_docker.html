@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: blue;
+  width: 350px;
+  height: 350px;
+  display: grid;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+.grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center;
+      align-items: center;
+      grid-row-gap: 50px;
+              grid-column-gap: 30px;
+    }
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: black;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 140px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: #C5C6C7;
+}
+
+#blog {
+  top: 80px;
+  background-color: #45A29E; /* Blue */
+}
+
+#projects {
+  top: 140px;
+  background-color: #C5C6C7; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: #45A29E; /* Light Black */
+}
+#hadoop {
+  top: 260px;
+  background-color: #C5C6C7; /* Light Black */
+}
+#configure {
+  top: 320px;
+  background-color: #45A29E; /* Light Black */
+}
+#back {
+  top: 380px;
+  background-color: #C5C6C7; /* Light Black */
+}
+
+body {
+  background-color: #328f8a;
+  background-image: url("https://cdn.pling.com/img/9/2/b/9/6f3bc10346f068b85fd5720d3fa2b57f241036ee661c1e578d40d95d65d3dc025e56.gif")
+}
+
+</style>
+</head>
+<body>
+        <center>
+        <h1  style="color: Yellow;"> DOCKER CONFIGURE REMOTELY </h1>
+        </center>
+<div class= "grid">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/1200px-Tux.svg.png" alt="Paris" style="width:350px;height:350px">
+      <h3  style="color: Yellow;"> DOCKER CONFIGURE REMOTELY </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/adocinstall.py">
+<br>
+<br>
+<br><br>
+<h3  style="color: Yellow;"> DOCKER CONFIGURE REMOTELY </h3>
+<br>
+<br>Enter the Host password : <input type="password" name="p">
+<br>
+<br>
+Enter the IP : <input type="text" name="i">
+<br>
+<br><br>
+<br><br><br>
+
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="redhat.html" id="about">COMMANDS</a>
+  <a href="docker.html" id="blog">DOCKER</a>
+  <a href="aws.html" id="projects">AWS</a>
+  <a href="partition.html" id="contact">PARTITION</a>
+  <a href="hadoop.html" id="hadoop">HADOOP</a>
+  <a href="configure.html" id="configure">CONFIGURE</a>
+  <a href="#" id="back">BACK</a>
+</div>
+</body>
+</html>
+

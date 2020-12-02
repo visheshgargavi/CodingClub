@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: blue;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+.grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      align-items: center;
+      grid-row-gap: 50px;
+              grid-column-gap: 30px;
+    }
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: black;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 140px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: #C5C6C7;
+}
+
+#blog {
+  top: 80px;
+  background-color: #45A29E; /* Blue */
+}
+
+#projects {
+  top: 140px;
+  background-color: #C5C6C7; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: #45A29E; /* Light Black */
+}
+#hadoop {
+  top: 260px;
+  background-color: #C5C6C7; /* Light Black */
+}
+#configure {
+  top: 320px;
+  background-color: #45A29E; /* Light Black */
+}
+#back {
+  top: 380px;
+  background-color: #C5C6C7; /* Light Black */
+}
+
+
+body {
+background: url("https://kamilhristov.github.io/infrastructure-as-code/img/ci.gif");
+
+}
+
+</style>
+</head>
+<body>
+        <center>
+        <h1 style="color: #000000;"> SNAPSHOT </h1>
+        </center>
+<div class= "grid">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://www.yobyot.com/wp-content/uploads/2015/05/ebs-snapshot-201x300.png" alt="Paris" style="width:300px;height:300px">
+      <h3  style="color: #000000;"> CREATE SNAPSHOT </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/snap_1.py">
+              <br><br>
+Enter Volume - id: <input type="text" name="vid"> 
+                              <br>
+<br>
+<br>
+Enter description: <input type="text" name="dsc"> 
+<br>
+<br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://www.yobyot.com/wp-content/uploads/2015/05/ebs-snapshot-201x300.png" alt="Paris" style="width:300px;height:300px">
+      <h3  style="color: #000000;"> COPY SNAPSHOT </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/snap_2.py">
+              <br>
+Enter Source-Region: <input type="text" name="sr">
+<br>
+<br>
+Enter the Region: <input type="text" name="r"><br><br>
+Enter the Source-snapshot: <input type="text" name="ss"><br>
+
+<br>
+<br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+    </div>
+  </div>
+</div>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://www.yobyot.com/wp-content/uploads/2015/05/ebs-snapshot-201x300.png" alt="Paris" style="width:300px;height:300px">
+      <h3 style="color: #000000;"> CREATE GP2 VOLUME </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/snap_3.py">
+              <br><br>
+Enter Snapshot-region: <input type="text" name="vt">                              <br>
+<br>
+Enter Snapshot-ID: <input type="text" name="sid">
+<br>
+<br>
+Enter Availability-zone: <input type="text" name="az"><br><br><br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://www.yobyot.com/wp-content/uploads/2015/05/ebs-snapshot-201x300.png" alt="Paris" style="width:300px;height:300px">
+      <h3 style="color: #000000;"> CREATE IOPs VOLUME </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/snap_4.py">
+              <br><br>
+Enter Volume-type: <input type="text" name="vt">                     
+<br>
+<br>Enter snapshot-region: <input type="text" name="r"><br><br>
+Enter Snapshot-ID: <input type="text" name="sid">
+<br>
+<br>Enter IOPs Speed: <input type="text" name="iop">
+<br><br>
+Enter Availability-zone: <input type="text" name="az"><br><br><br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://www.yobyot.com/wp-content/uploads/2015/05/ebs-snapshot-201x300.png" alt="Paris" style="width:300px;height:300px">
+      <h3 style="color: #000000;"> DELETE SNAPSHOT </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/ec2_5.py">
+              <br><br>
+                              <br>
+<br>
+Enter the Snapshot-ID: <input type="text" name="sid">
+<br><br>
+<br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="redhat.html" id="about">COMMANDS</a>
+  <a href="docker.html" id="blog">DOCKER</a>
+  <a href="aws.html" id="projects">AWS</a>
+  <a href="partition.html" id="contact">PARTITION</a>
+  <a href="hadoop.html" id="hadoop">HADOOP</a>
+  <a href="configure.html" id="configure">CONFIGURE</a>
+  <a href="#" id="back">BACK</a>
+</div>
+</body>
+</html>
+

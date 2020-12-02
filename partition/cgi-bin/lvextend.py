@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-print("content-type: type/plain")
+print("content-type: text/plain")
 print()
 
 import subprocess as sp
@@ -13,7 +13,7 @@ vg = field.getvalue("vg")
 lv = field.getvalue("lv")
 size = field.getvalue("s")
 
-cmd = "echo {} | sudo /usr/local/bin/ansible-playbook /var/www/cgi=bin/lvextend.yml --extra-var 'Host={} Vgname={} Lvname={} Size={}'".format(pss,ip,vg,lv,size)
+cmd = "echo {} | sudo /usr/local/bin/ansible-playbook /var/www/cgi-bin/lvextend.yml --extra-var 'Host={} Vgname={} Lvname={} Size={}'".format(pss,ip,vg,lv,size)
 
 output = sp.getoutput(cmd)
 print(output)

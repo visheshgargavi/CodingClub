@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styleContact.css">
+</head>
+<body>
+    
+    <div class="container">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+      <div class="container2">
+          
+        <h1>My First Google Map</h1>
+
+        <div id="googleMap" style="width:60%;height:auto;"></div>
+
+        <script>
+        function myMap() {
+            var mapProp= {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        </script>
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>      
+      </div>
+      
+
+</body>
+</html>

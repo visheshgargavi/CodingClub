@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="google.css">
+
+    <style>
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'arial', sans-serif;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+section header
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+}
+section header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section header ul li
+{
+   list-style: none;
+   margin-left: 20px;
+}
+section header ul li a
+{
+   color: #111;
+   text-decoration: none;
+   font-size: 13px;
+}
+section header ul li  button
+{
+    background: #4584ef;
+    border:none;
+    outline: none;
+    padding: 8px 14px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.image
+{
+    width:500px;
+}
+.img
+{
+    width: 20px;
+}
+.img1
+{
+    width: 20px;
+}
+
+.img2
+{
+    width: 20px;
+}
+
+section .main
+{
+   width: 580px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+section .main .searchbox
+{
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+section .main .searchbox .search
+{
+  width: 100%;
+  padding: 13px;
+  padding-left:45px;
+  padding-right: 60px;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+}
+
+
+section .main .searchbox .icons
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    padding:12px 20px;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
+}
+         #mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 140px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: blue;
+}
+
+#blog {
+  top: 80px;
+  background-color: blue; /* Blue */
+}
+
+#projects {
+  top: 140px;
+  background-color: blue; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: blue; /* Light Black */
+}
+#hadoop {
+  top: 260px;
+  background-color: blue; /* Light Black */
+}
+#back {
+  top: 320px;
+  background-color: blue; /* Light Black */
+}
+
+        body
+        {
+           background-image: url("https://upload.wikimedia.org/wikipedia/commons/4/46/RHEL_8_Desktop.png");
+        }
+        </style>
+</head>
+<body >
+    <section>
+        <header>
+            <ul>
+                <li> <a href="#">Gmail</a></li>
+                <li> <a href="#">Image</a></li>
+                <li> <a href="#"><img class="img" src="https://cdn0.iconfinder.com/data/icons/basic-ui-vol-1/32/UI_stroke-05-512.png"></a></li>
+
+                <li> <button>SignIn</button> </li>
+            </ul>
+        </header>
+        <div class="main">
+                <form action="http://192.168.43.43/cgi-bin/redhat.py">
+
+            <img class="image" src="https://upload.wikimedia.org/wikipedia/sco/thumb/6/6c/RedHat.svg/1200px-RedHat.svg.png">
+            <div class="searchbox">
+                <input type="text" name="x" class="search">
+                <div class="icons">
+                    <div> <img class="img1"src="https://cdn0.iconfinder.com/data/icons/google-material-design-3-0/48/ic_search_48px-512.png"></div>
+                    <div> <img class="img2"src="https://static.thenounproject.com/png/2313-200.png"></div>
+                </div>
+            </div>
+
+        </div>
+        </form>
+         </div>
+                <div id="mySidenav" class="sidenav">
+  <a href="redhat.html" id="about">COMMANDS</a>
+  <a href="docker.html" id="blog">DOCKER</a>
+  <a href="aws.html" id="projects">AWS</a>
+  <a href="partition.html" id="contact">PARTITION</a>
+  <a href="hadoop.html" id="hadoop">HADOOP</a>
+  <a href="#" id="back">BACK</a>
+</div>
+
+    </section>
+</body>
+</html>

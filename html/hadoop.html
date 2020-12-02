@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#mySidenav2 a {
+  position: absolute; /* Position them relative to the browser window */
+  right: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 140px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav2 a:hover {
+  right: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: #C5C6C7;
+}
+
+#blog {
+  top: 80px;
+  background-color: #45A29E; /* Blue */
+}
+
+#projects {
+  top: 140px;
+  background-color: #C5C6C7; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: #45A29E; /* Light Black */
+}
+#hadoop {
+  top: 260px;
+  background-color: #C5C6C7; /* Light Black */
+}
+#configure {
+  top: 320px;
+  background-color: #45A29E; /* Light Black */
+}
+#back {
+  top: 380px;
+  background-color: #C5C6C7; /* Light Black */
+}
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+</style>
+</head>
+</head>
+
+<style>
+body {
+  background: url('https://cdn.dribbble.com/users/855595/screenshots/3499433/newton02_dribbble.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed; 
+
+}
+</style>
+<center>
+<h1>BigData Hadoop<h1>
+    </center>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="remote_namenode.html">Namenode Remotely</a>
+  <a href="remote_datanode.html">Datanode Remotely</a>
+  <a href="remote_hadoop.html">Basic Command Remotely</a>
+  <a href="local_namenode.html">Namenode Locally</a>
+<a href="local_datanode.html">Datanode Locally</a>
+
+</div>
+<div id="mySidenav2" class="sidenav2">
+  <a href="redhat.html" id="about">COMMANDS</a>
+  <a href="docker.html" id="blog">DOCKER</a>
+  <a href="aws.html" id="projects">AWS</a>
+  <a href="partition.html" id="contact">PARTITION</a>
+  <a href="hadoop.html" id="hadoop">HADOOP</a>
+  <a href="configure.html" id="configure">CONFIGURE</a>
+  <a href="#" id="back">BACK</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; HADOOP MENU</span>
+<form action="http://192.168.43.43/cgi-bin/hadoop_basic_local.py">
+  <input type="text" name="x" placeholder="seach.....  Enter Hadoop basic commands ">
+</form>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>
+

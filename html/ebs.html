@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flip-box {
+  background-color: blue;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
+.grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      align-items: center;
+      grid-row-gap: 50px;
+              grid-column-gap: 30px;
+    }
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: black;
+  color: black;
+}
+
+.flip-box-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 140px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 20px;
+  background-color: #C5C6C7;
+}
+
+#blog {
+  top: 80px;
+  background-color: #45A29E; /* Blue */
+}
+
+#projects {
+  top: 140px;
+  background-color: #C5C6C7; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: #45A29E; /* Light Black */
+}
+#hadoop {
+  top: 260px;
+  background-color: #C5C6C7; /* Light Black */
+}
+#configure {
+  top: 320px;
+  background-color: #45A29E; /* Light Black */
+}
+#back {
+  top: 380px;
+  background-color: #C5C6C7; /* Light Black */
+}
+
+
+body {
+background: url("https://www.yubico.com/wp-content/uploads/2019/01/aws_text_opWeb.gif");
+ 
+}
+
+</style>
+</head>
+<body>
+        <center>
+        <h1 style="color: #000000;"> EBS SERVICES </h1>
+        </center>
+<div class= "grid">
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://tutorialslink.com/Article_img/Blog_image/86c42b4e-096b-49d9-90e7-c7a5873014ce.png" alt="Paris" style="width:300px;height:300px">
+      <h3  style="color: #800080;"> Creating EBS </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/ebs_1.py">
+              <br><br>
+                              <br>
+Enter the volume type: <input type="text" name="vt">
+<br>
+Enter the volume size: <input type="text" name="vs">
+<br>
+Enter the availability zone<input type="text" name="az">
+<br>
+<br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://tutorialslink.com/Article_img/Blog_image/86c42b4e-096b-49d9-90e7-c7a5873014ce.png" alt="Paris" style="width:300px;height:300px">
+      <h3  style="color: #800080;"> Describe EBS </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/ebs_2.py">
+              <br>
+<br><br>
+Press the Run button to see-
+<br><br><br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://tutorialslink.com/Article_img/Blog_image/86c42b4e-096b-49d9-90e7-c7a5873014ce.png" alt="Paris" style="width:300px;height:300px">
+      <h3 style="color: #800080;"> Attaching EBS </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/ebs/ebs_3.py">
+              <br><br>
+                              <br>
+<br>
+Enter the Instance-id: <input type="text" name="id">
+<br>
+Enter the Volume-id: <input type="text" name="vid">
+<br>
+Enter the device name: <input type="text" name="d">
+<br><br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://tutorialslink.com/Article_img/Blog_image/86c42b4e-096b-49d9-90e7-c7a5873014ce.png" alt="Paris" style="width:300px;height:300px">
+      <h3 style="color: #800080;"> Detaching EBS </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/ebs_4.py">
+              <br><br>
+                              <br>
+<br>
+Enter the volume-id to detach: <input type="text" name="vid">
+<br>
+<br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://tutorialslink.com/Article_img/Blog_image/86c42b4e-096b-49d9-90e7-c7a5873014ce.png" alt="Paris" style="width:300px;height:300px">
+      <h3 style="color: #800080;"> Deleting EBS </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/ebs_5.py">
+              <br><br>
+                              <br>
+<br>
+Enter the volume-id to delete: <input type="text" name="vid">
+<br>
+<br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://tutorialslink.com/Article_img/Blog_image/86c42b4e-096b-49d9-90e7-c7a5873014ce.png" alt="Paris" style="width:300px;height:300px">
+      <h3 style="color: #800080;"> Modifying EBS </h3>
+    </div>
+    <div class="flip-box-back">
+      <form action="http://192.168.43.43/cgi-bin/aws/ebs_6.py">
+              <br><br>
+                              <br>
+<br>
+Enter the volume-size to modify: <input type="text" name="vs">
+<br><br>
+Enter the volume-id to modify: <input type="text" name="vid">
+<br>
+<br>
+<input type='submit' value="Run" style='font-size:20pt'>
+</form>
+
+    </div>
+  </div>
+</div>
+</div>
+
+
+</div>
+<div id="mySidenav" class="sidenav">
+  <a href="redhat.html" id="about">COMMANDS</a>
+  <a href="docker.html" id="blog">DOCKER</a>
+  <a href="aws.html" id="projects">AWS</a>
+  <a href="partition.html" id="contact">PARTITION</a>
+  <a href="hadoop.html" id="hadoop">HADOOP</a>
+  <a href="configure.html" id="configure">CONFIGURE</a>
+  <a href="#" id="back">BACK</a>
+</div>
+</body>
+</html>

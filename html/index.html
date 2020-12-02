@@ -1,0 +1,429 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="footer.css" rel="stylesheet" >
+	<style>
+	html,body
+	{
+		width: 100%;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+		overflow-x: hidden; 
+	}
+	.log input {
+		border: none;
+		border-bottom: 1px solid #ffc185;
+		width: 85%;
+		font-family: 'Roboto';
+		color: #ff7d00;
+		text-align: center;
+		font-size: 21px;
+		font-weight:100;
+		margin-bottom:25px;
+	}
+	.head_form{
+		font-family: 'Dosis';
+		font-size: 35px;
+		text-transform: uppercase;
+		color: #87613d;
+		margin-bottom: 30px;
+	}
+	.icon-bar{
+		  width: 30px;
+		  height: 2px;
+		  background-color: white;
+		  margin: 6px 0;
+	}
+	.social{
+		padding-top:10px;
+	}
+	</style>
+</head>
+<body>
+  <div class="container1">
+
+    <!--<nav class="navbar">
+		<a href="index.html" class="navbar-brand d-flex mb-3"><img class="img-responsive" src="https://drive.google.com/file/d/19mF_0ZqhzjLc7koKBmKxJhWPFGVhr6NU/view?usp=sharing" width="35" height="35" style="margin-left:60%"></a>
+      <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Location</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="#team">Our Team</a></li>
+      </ul>
+    </nav> -->
+	<nav class="navbar navbar-expand-lg fixed-top py-3">
+	  <div class="container-fluid"><a href="#" class="navbar-brand d-flex align-items-center"><img class="img-responsive" src="logo.jpeg" width="35" height="35">&nbsp;Coding Club</a>
+		<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler">
+			<div class="icon-bar"></div>
+			<div class="icon-bar"></div>
+			<div class="icon-bar"></div>
+		</button>
+		<div id="navbarSupportedContent" class="collapse navbar-collapse">
+			<ul class="nav navbar-navnavbar-right">
+				<li class="nav-item active"><a href="#home" class="nav-link font-italic"> Home </a></li>
+				<li class="nav-item active"><a href="#about" class="nav-link font-italic"> About Us</a></li>
+				<li class="nav-item active"><a href="#" class="nav-link font-italic"> Location</a></li>
+				<li class="nav-item active"><a href="#contact" class="nav-link font-italic"> Contact</a></li>
+				<li class="nav-item active"><a href="#team" class="nav-link font-italic"> Our Team</a></li>
+			</ul>		
+		  
+		</div>
+	  </div>
+	</nav>
+    <section id="home" style="background-image: url('https://i.pinimg.com/originals/5c/a3/38/5ca338daf3e5fde9b7c4b64dea8897aa.gif');height:100vh;background-size:cover;">
+			<div class="row">
+				
+				<div class="col-md-5 col-xs-6 col-sm-6 offset-7 form-box">
+					<form class="signUp log" action="configure.html">
+						<h3 class="head_form">Admin Login</h3>
+							<input type="text" placeholder="Enter Username" name="uname" required>
+
+							<input type="password" placeholder="Enter Password" name="psw" required><br>
+							<div class="rem">
+								<input type="checkbox" checked="checked" name="remember" style="width:12%;margin-left:18px;"> Remember me
+							</div>
+							<div class="forgot">
+								<span class="psw">Forgot <a href="#">password?</a></span>
+							</div><br>
+							<div class="New">
+								<span class="New_acc">New? <a href="#" data-toggle="modal" data-target="#adminSignup">Register here</a></span>
+							</div>
+							<div class="social">
+								<ul class="social-network social-circle_1">
+									<li><a href="#" class="icoFacebook" title="Facebook" style="border:1px solid;"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#" class="icoLinkedin" title="Linkedin" style="border:1px solid;"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#" class="icoInstagram" title="Instagram" style="border:1px solid;"><i class="fa fa-instagram"></i></a></li>
+								</ul>
+							</div>	
+						<button class="form-btn sx log-in" type="button">Student Login</button>
+						<button class="form-btn dx" type="submit">Log In</button>
+					</form>
+					<form class="signIn log" action="192.168.43.43/configure.html">
+						<h3 class="head_form">Student Login</h3>
+							<input type="text" placeholder="Enter Username" name="uname" required>
+
+							<input type="password" placeholder="Enter Password" name="psw" required>
+							<div class="rem">
+								<input type="checkbox" checked="checked" name="remember" style="width:12%;margin-left:18px;"> Remember me
+							</div>
+							<div class="forgot">
+								<span class="psw">Forgot <a href="#">password?</a></span>
+							</div><br>
+							<div class="New">
+								<span class="New_acc">New? <a href="#" data-toggle="modal" data-target="#studentSignup">Register here</a></span>
+							</div>
+							<div class="social">
+								<ul class="social-network social-circle_1">
+									<li><a href="#" class="icoFacebook" title="Facebook" style="border:1px solid;"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#" class="icoLinkedin" title="Linkedin" style="border:1px solid;"><i class="fa fa-linkedin"></i></a></li>
+									<li><a href="#" class="icoInstagram" title="Instagram" style="border:1px solid;"><i class="fa fa-instagram"></i></a></li>
+								</ul>
+							</div>	
+						<button class="form-btn sx back" type="button">Admin Login</button>
+						<button class="form-btn dx" type="submit">Log In</button>
+					</form>
+				</div>	
+				
+		<div id="adminSignup" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h3>Admin SignUp</h3>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			  </div>
+			  <div class="modal-body">
+				<form action="#">
+					<p>Please fill in this form to create an account.</p>
+
+					<div class="form-group">
+						<label for="Email">Email address</label>
+						<input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+						<!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+					</div>
+					<div class="form-group">
+						<label for="Pass">Password</label>
+						<input type="password" class="form-control" id="Pass" placeholder="Password">
+					</div>
+					
+					<div class="form-group">
+						<label for="conPass">Confirm Password</label>
+						<input type="password" class="form-control" id="conPass" placeholder="Password">
+					</div>
+					
+					<div class="form-group">
+						<input type="checkbox" name="remember"> Remember me
+					</div>
+
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="submit" class="btn btn-default">Sign Up</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		
+		<div id="studentSignup" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h3>Student SignUp</h3>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			  </div>
+			  <div class="modal-body">
+				<form action="#">
+					<p>Please fill in this form to create an account.</p>
+
+					<div class="form-group">
+						<label for="Email">Email address</label>
+						<input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
+						<!--<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+					</div>
+					<div class="form-group">
+						<label for="Pass">Password</label>
+						<input type="password" class="form-control" id="Pass" placeholder="Password">
+					</div>
+					
+					<div class="form-group">
+						<label for="conPass">Confirm Password</label>
+						<input type="password" class="form-control" id="conPass" placeholder="Password">
+					</div>
+					
+					<div class="form-group">
+						<input type="checkbox" name="remember"> Remember me
+					</div>
+
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="submit" class="btn btn-default">Sign Up</button>
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+	
+	</div>
+	</section>
+	<script>
+		$(".log-in").click(function(){
+			$(".signIn").addClass("active-dx");
+			$(".signUp").addClass("inactive-sx");
+			$(".signUp").removeClass("active-sx");
+			$(".signIn").removeClass("inactive-dx");
+		});
+
+		$(".back").click(function(){
+			$(".signUp").addClass("active-sx");
+			$(".signIn").addClass("inactive-dx");
+			$(".signIn").removeClass("active-dx");
+			$(".signUp").removeClass("inactive-sx");
+		});
+	</script>
+	
+	
+    <section id="about">
+		<div class="bg-light">
+		  <div class="container py-5">
+			<div class="row h-60 align-items-center py-5">
+			  <div class="col-lg-6">
+				<h1 class="display-4">Coding Club</h1>
+				<p class="lead text-muted mb-0">Learn , Inspire and Grow
+Learn with community. Sessions are taken on regular basis by Core Team member and Mentors.We value the power of influence. We believe people here will be the foundation of great coders.
+We learn together and help each other so that all people of community grow with each other.
+Sessions are taken either Offline or online as Youtube Session.</p>
+				</p>
+			  </div>
+			  <div class="col-lg-6 d-none d-lg-block"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/illus_kftyh4.png" alt="" class="img-fluid"></div>
+			</div>
+		  </div>
+		</div>
+
+		<div class="bg-white py-5">
+		  <div class="container py-5">
+			<div class="row align-items-center mb-5">
+			  <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+				<h2 class="font-weight-light">What We Do?</h2>
+				<p class="font-italic text-muted mb-4">Coding Club is one of the active club of PCE . As a part of the Technical Council, we aim to provide a gateway for the people in our institute to join the coding community. We create a platform which allows students to gain assistance and mentorship to enhance their coding ability. Our aim is to propagate the enthusiasm for coding in the institute and especially amongst freshmen. We believe that every student here at Poornima College of Engineering should have an opportunity to learn how to code and develop a passion for it. The secret of getting ahead is getting started and we aim to provide every student with the right start.</p>
+			  </div>
+			  <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834139/img-1_e25nvh.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+			</div>
+			<div class="row align-items-center">
+			  <div class="col-lg-5 px-5 mx-auto"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/img-2_vdgqgn.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+			  <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+				<h2 class="font-weight-light">Why Choose Us?</h2>
+				<p class="font-italic text-muted mb-4">jjgjhfd hgjhd fhkjgd fkhg kdhf kghd kjj jg jkljfd jjgjhfd hgjhd fhkjgd fkhg kdhf kghd kjj jg jkljfd jjgjhfd hgjhd fhkjgd fkhg kdhf kghd kjj jg jkljfd jjgjhfd hgjhd fhkjgd fkhg kdhf kghd kjj jg jkljfd jjgjhfd hgjhd fhkjgd fkhg kdhf kghd kjj.</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		
+    </section>
+
+
+    <section class="team" id="team">
+		<h1 class="text-center" style="padding-top:20px;">Meet Our Team</h1><br><br>
+		<div class="container-fluid">
+			<div class="row">
+				<!--team-1-->
+				<div class="col-lg-2">
+					<div class="our-team-main">
+						<div class="team-front"> <img src="saket.jpeg" class="img-fluid" />
+							<h3>Saket Sharma</h3>
+							<p>Club-Advisor</p>
+						</div>
+						<div class="team-back"> <span> Description: name: Saket Sharma , Branch: Computer science, Year: 3rd </span> </div>
+					</div>
+				</div>
+				<!--team-1-->
+				<!--team-2-->
+				<div class="col-lg-2">
+					<div class="our-team-main">
+						<div class="team-front"> <img src="vishesh.jpeg" class="img-fluid" />
+							<h3>Vishesh Garg</h3>
+							<p>Captain</p>
+						</div>
+						<div class="team-back"> <span> Description: name: Vishesh Garg , Branch: Computer science, Year: 2nd </span> </div>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<div class="our-team-main">
+						<div class="team-front"> <img src="" class="img-fluid" />
+							<h3>?</h3>
+							<p>Vice-Captain</p>
+						</div>
+						<div class="team-back"> <span> Description: </span> </div>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<div class="our-team-main">
+						<div class="team-front"> <img src="akshita1.jpeg" class="img-fluid" />
+							<h3>Akshita Mittal</h3>
+							<p>Core-Team-Member</p>
+						</div>
+						<div class="team-back"> <span> Description: name: Akshita Mittal , Branch: ECE, Year: 2nd</span> </div>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<div class="our-team-main">
+						<div class="team-front"> <img src="riya.jpeg" class="img-fluid" />
+							<h3>Riya Kumari</h3>
+							<p>Core-Team-Member</p>
+						</div>
+						<div class="team-back"> <span> Description: name: Riya Kumari , Branch: Computer science, Year: 2nd </span> </div>
+					</div>
+				</div>
+				<div class="col-lg-2">
+					<div class="our-team-main">
+						<div class="team-front"> <img src="gaurav.jpeg" class="img-fluid" />
+							<h3>Gaurav Pipada</h3>
+							<p>Core-Team-Member</p>
+						</div>
+						<div class="team-back"> <span> Description: name: Gaurav Pipada , Branch: Computer science, Year: 2nd </span> </div>
+					</div>
+				</div>
+			</div>
+		</div>	
+    </section>
+    
+    <section id="Location">
+
+    </section>
+	
+    <section id="contact">
+      <footer class="mainfooter" role="contentinfo">
+  <div class="footer-middle">
+  <div class="container-fluid">
+	
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <!--Column1-->
+        <div class="footer-pad">
+		<ul class="social-network social-circle">
+          <li><a href="#" class="icoMail" title="Email"><i class="fa fa-envelope fa-2x"></i></a></li>
+		</ul>  
+		<h4>Email</h4>
+          <ul class="list-unstyle">
+            <li>For club related query</li>
+			<li>Vishesh Garg</li>
+            <li>2019pcecsvishesh197@poornima.org</li>
+            <li>For council related </li>
+			<li>Students' Council PCE</li>
+            <li>studentscouncilpce@poornima.org</li>
+            <li>you can also post your queries to-</li>
+            <li>Personal</li>
+            <li>vishesh8199@gmail.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <!--Column1-->
+        <div class="footer-pad">
+		<ul class="social-network social-circle">
+          <li><a href="#" class="icoContact" title="Contact"><i class="fa fa-phone fa-2x"></i></a></li>
+		</ul>  
+		<h4>Contact</h4>
+          <ul class="list-unstyle">
+            <li>Vishesh Garg</li>
+            <li>9784798958</li>
+            <li>Saket Sharma</li>
+            <li>9672943256</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <!--Column1-->
+        <div class="footer-pad">
+		<ul class="social-network social-circle" style="padding-bottom:10px;">
+          <li><a href="#" class="icoMap" title="Address"><i class="fa fa-map-marker fa-2x"></i></a></li>
+		</ul>  
+		<h4>Address</h4>
+		<ul class="list-unstyle">
+			<li>Poornima college of engineering</li>
+			<li>Institutional area, Sitapura</li>
+			<li>Jaipur</li>
+		</ul>  
+        </div>
+      </div>
+    	
+    </div>
+	<div class="row copy">
+			<div class="col-md-6">
+				<p style="color:white;">&copy; Copyright 2018 - Company Name.  All rights reserved.</p>
+			</div>
+			<div class="col-md-6">
+				<ul class="social-network social-circle_1" style="float:right;">
+					<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
+			</div>	
+	</div>
+
+
+  </div>
+  </div>
+</footer>
+    </section>
+  
+</body>
+</html>

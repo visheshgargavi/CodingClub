@@ -14,6 +14,6 @@ num = field.getvalue("n")
 src = field.getvalue("src")
 end = field.getvalue("dest")
 
-cmd = "sudo echo {} | sudo /usr/local/bin/ansible-playbook /var/www/cgi-bin/rmstatic.yml --extra-vars 'Host={} Device={} Number={} src={} dest={}'".format(pss,host,disk,num,src,dest)
+cmd = "sudo echo {} | sudo /usr/local/bin/ansible-playbook /var/www/cgi-bin/rmstatic.yml --extra-vars 'Host={} Device={} Number={} src={} dest={}'".format(pss,host,disk,num,src,end)
 output = sp.getoutput(cmd)
 print(output)

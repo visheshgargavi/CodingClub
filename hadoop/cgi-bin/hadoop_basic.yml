@@ -1,0 +1,22 @@
+- name: Datanode using ansible
+  gather_facts: No
+  remote_user: apache
+  become: true
+  become_method: sudo
+  hosts: "{{ Host }}"
+  vars_prompt:
+  - name: Host
+    prompt: "Enter Host ip"
+    private: no
+  - name: cmd
+    prompt: "Enter your command"
+    private: no
+
+  tasks:
+  - name: command
+    shell: 'sudo "{{ cmd }}"'
+    register: x
+
+  - name: output
+    debug:
+      var: x
